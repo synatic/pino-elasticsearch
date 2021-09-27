@@ -81,6 +81,7 @@ function pinoElasticSearch(opts) {
         index: {
           _index: getIndexName(doc.time || doc["@timestamp"]),
           _type: type,
+          op_type: "create",
         },
       };
     },
