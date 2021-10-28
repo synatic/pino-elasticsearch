@@ -90,6 +90,7 @@ function pinoElasticSearch(opts) {
       error.document = doc;
       splitter.emit("insertError", error);
     },
+    pipeline: opts.pipeline,
   });
 
   b.then(
